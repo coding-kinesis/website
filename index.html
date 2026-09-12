@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OntoWeaver — Documents into Knowledge Graphs</title>
+    <meta
+      name="description"
+      content="OntoWeaver parses documents, curates ontology, and weaves knowledge graphs — structured intelligence from unstructured text."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <canvas id="graph-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="OntoWeaver home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        OntoWeaver
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">What we do</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#domain" class="nav-cta">Bring us a domain</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Frontier lab for structured knowledge</p>
+        <h1 class="brand-hero">OntoWeaver</h1>
+        <p class="hero-line">
+          Documents become<br />
+          <em>woven structure.</em>
+        </p>
+        <p class="hero-support">
+          We parse complex documents, curate domain ontology, and weave
+          knowledge graphs that systems — and experts — can actually use.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#pipeline">See the pipeline</a>
+          <a class="btn btn-ghost" href="#domain">Bring us a domain</a>
+        </div>
+      </section>
+
+      <section class="problem" id="work">
+        <div class="section-label">The extraction problem</div>
+        <h2>
+          Knowledge is trapped<br />
+          in <em>prose.</em>
+        </h2>
+        <p class="lead">
+          Enterprises run on PDFs, contracts, manuals, filings, and research
+          notes. Humans can read them. Machines cannot reason over them — until
+          the text is parsed, typed, and linked.
+        </p>
+        <div class="pillar-grid">
+          <article class="pillar">
+            <span class="pillar-index">01</span>
+            <h3>Text is not structure</h3>
+            <p>
+              A paragraph can hide entities, relations, exceptions, and
+              definitions. Flat extraction misses the system underneath the
+              sentences.
+            </p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-index">02</span>
+            <h3>Ontology is the missing layer</h3>
+            <p>
+              Without shared types and meanings, every document stays an island.
+              Ontology turns scattered mentions into a coherent vocabulary.
+            </p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-index">03</span>
+            <h3>Graphs make knowledge operable</h3>
+            <p>
+              Once entities and relations are linked, you can query, traverse,
+              and compose — not just search for similar wording.
+            </p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-index">04</span>
+            <h3>Manual curation does not scale</h3>
+            <p>
+              Experts should define the schema and validate edge cases — not
+              re-key every clause by hand.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pipeline" id="pipeline">
+        <div class="section-label">What we build now</div>
+        <h2>
+          From document<br />
+          to <em>graph.</em>
+        </h2>
+        <p class="lead">
+          Our current focus is the full chain: parse the source, curate the
+          ontology, materialize the knowledge graph.
+        </p>
+
+        <ol class="pipeline-stages">
+          <li class="stage" data-stage="1">
+            <div class="stage-meta">
+              <span class="stage-num">Stage 01</span>
+              <h3>Document parsing</h3>
+            </div>
+            <p>
+              Ingest PDFs, scans, and structured files. Recover layout, tables,
+              sections, and citations. Emit clean, span-addressable text with
+              provenance back to the source page.
+            </p>
+            <ul class="stage-tags">
+              <li>layout recovery</li>
+              <li>table extraction</li>
+              <li>provenance spans</li>
+            </ul>
+          </li>
+          <li class="stage" data-stage="2">
+            <div class="stage-meta">
+              <span class="stage-num">Stage 02</span>
+              <h3>Ontology curation</h3>
+            </div>
+            <p>
+              Define the types that matter for the domain — entities, relations,
+              attributes, constraints. Align extracted mentions to a living
+              schema experts can inspect and revise.
+            </p>
+            <ul class="stage-tags">
+              <li>entity types</li>
+              <li>relation inventory</li>
+              <li>expert review loops</li>
+            </ul>
+          </li>
+          <li class="stage" data-stage="3">
+            <div class="stage-meta">
+              <span class="stage-num">Stage 03</span>
+              <h3>Knowledge graphs</h3>
+            </div>
+            <p>
+              Weave a graph: nodes for concepts, edges for relations, attributes
+              for facts. Queryable structure with lineage to the paragraphs that
+              justified each claim.
+            </p>
+            <ul class="stage-tags">
+              <li>entity resolution</li>
+              <li>relation linking</li>
+              <li>lineage &amp; audit</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="thesis" id="thesis">
+        <div class="section-label">Thesis</div>
+        <blockquote>
+          <p>
+            Unstructured documents are not a search problem.<br />
+            They are a <em>representation</em> problem.
+          </p>
+        </blockquote>
+        <div class="thesis-grid">
+          <div>
+            <h3>Parse with fidelity</h3>
+            <p>
+              If the source structure is lost, every downstream model invents
+              its own. We keep layout, tables, and citations intact.
+            </p>
+          </div>
+          <div>
+            <h3>Name things carefully</h3>
+            <p>
+              Ontology is where domain expertise becomes executable. Shared
+              types are how teams stop arguing about synonyms and start querying
+              facts.
+            </p>
+          </div>
+          <div>
+            <h3>Weave what can be linked</h3>
+            <p>
+              A knowledge graph is not a dump of triples. It is a maintained map
+              of what the documents actually say — and how those sayings
+              connect.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="domains" id="domain">
+        <div class="domains-inner">
+          <div class="section-label">Research partnership</div>
+          <h2>
+            If the domain has documents,<br />
+            definitions, and dependencies —<br />
+            <em>it can be woven.</em>
+          </h2>
+          <p class="lead">
+            The knowledge already exists. It lives in manuals, contracts,
+            policies, standards, and expert notes. OntoWeaver turns that material
+            into parseable text, curated ontology, and operable graphs.
+          </p>
+          <div class="domain-chips" aria-label="Example domains">
+            <span>regulatory filings</span>
+            <span>technical manuals</span>
+            <span>clinical guidelines</span>
+            <span>enterprise policies</span>
+            <span>research corpora</span>
+            <span>contracts &amp; clauses</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:hello@ontoweaver.ai"
+              >Bring us a domain</a
+            >
+            <a class="btn btn-ghost" href="mailto:hello@ontoweaver.ai"
+              >Talk to the lab</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <strong>OntoWeaver</strong>
+          <p>Weaving structured knowledge from documents.</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="year"></span> OntoWeaver. Sample local build.</p>
+        <a href="mailto:hello@ontoweaver.ai">hello@ontoweaver.ai</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
