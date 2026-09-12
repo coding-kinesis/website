@@ -3,5 +3,9 @@
   "compatibility_date": "2025-06-05",
   "assets": {
     "directory": "./"
-  }
+  },
+  "routes": [
+    { "pattern": "ontoweaver.com", "custom_domain": true },
+    { "pattern": "www.ontoweaver.com", "custom_domain": true }
+  ]
 }
