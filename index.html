@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OntoWeaver — Documents into Knowledge Graphs</title>
+    <title>OntoWeaver</title>
     <meta
       name="description"
       content="OntoWeaver parses documents, curates ontology, and weaves knowledge graphs — structured intelligence from unstructured text."
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=2" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,19 +20,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <canvas id="graph-canvas" aria-hidden="true"></canvas>
-
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="OntoWeaver home">
-        <span class="brand-mark" aria-hidden="true"></span>
+      <a class="header-brand" href="#top" aria-label="OntoWeaver home">
+        <img
+          class="header-brand-mark"
+          src="assets/brand-mark.png"
+          alt=""
+          width="28"
+          height="28"
+        />
         OntoWeaver
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#work">What we do</a>
         <a href="#pipeline">Pipeline</a>
-        <a href="#thesis">Thesis</a>
-        <a href="#domain" class="nav-cta">Bring us a domain</a>
+        <a href="#partnership">Research Partnership</a>
+        <a
+          href="https://calendly.com/vpreet-intelligence/30min"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Talk to the lab</a
+        >
       </nav>
       <button
         class="menu-toggle"
@@ -41,30 +53,27 @@
       </button>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <p class="eyebrow">Frontier lab for structured knowledge</p>
-        <h1 class="brand-hero">OntoWeaver</h1>
-        <p class="hero-line">
-          Documents become<br />
-          <em>woven structure.</em>
-        </p>
-        <p class="hero-support">
-          We parse complex documents, curate domain ontology, and weave
-          knowledge graphs that systems — and experts — can actually use.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#pipeline">See the pipeline</a>
-          <a class="btn btn-ghost" href="#domain">Bring us a domain</a>
+    <main>
+      <section class="hero snap-panel" id="top">
+        <div class="hero-copy">
+          <div class="hero-identity">
+            <h1 class="hero-name">OntoWeaver</h1>
+            <p class="hero-tagline">Crafting Domain-Native Intelligence</p>
+          </div>
+          <p class="hero-support">
+            Every domain’s core is its ontology. We curate it to turn structured
+            and unstructured data into a deterministic, fact-grounded knowledge
+            base that powers systems, agents, and experts.
+          </p>
+        </div>
+        <div class="hero-graph" aria-hidden="true">
+          <canvas id="hero-graph-canvas"></canvas>
         </div>
       </section>
 
-      <section class="problem" id="work">
-        <div class="section-label">The extraction problem</div>
-        <h2>
-          Knowledge is trapped<br />
-          in <em>prose.</em>
-        </h2>
+      <section class="problem snap-panel" id="work">
+        <div class="section-label">What we do</div>
+        <h2>Knowledge is trapped in <em>prose.</em></h2>
         <p class="lead">
           Enterprises run on PDFs, contracts, manuals, filings, and research
           notes. Humans can read them. Machines cannot reason over them — until
@@ -107,12 +116,9 @@
         </div>
       </section>
 
-      <section class="pipeline" id="pipeline">
-        <div class="section-label">What we build now</div>
-        <h2>
-          From document<br />
-          to <em>graph.</em>
-        </h2>
+      <section class="pipeline snap-panel" id="pipeline">
+        <div class="section-label">Pipeline</div>
+        <h2>From document to <em>graph.</em></h2>
         <p class="lead">
           Our current focus is the full chain: parse the source, curate the
           ontology, materialize the knowledge graph.
@@ -170,44 +176,9 @@
         </ol>
       </section>
 
-      <section class="thesis" id="thesis">
-        <div class="section-label">Thesis</div>
-        <blockquote>
-          <p>
-            Unstructured documents are not a search problem.<br />
-            They are a <em>representation</em> problem.
-          </p>
-        </blockquote>
-        <div class="thesis-grid">
-          <div>
-            <h3>Parse with fidelity</h3>
-            <p>
-              If the source structure is lost, every downstream model invents
-              its own. We keep layout, tables, and citations intact.
-            </p>
-          </div>
-          <div>
-            <h3>Name things carefully</h3>
-            <p>
-              Ontology is where domain expertise becomes executable. Shared
-              types are how teams stop arguing about synonyms and start querying
-              facts.
-            </p>
-          </div>
-          <div>
-            <h3>Weave what can be linked</h3>
-            <p>
-              A knowledge graph is not a dump of triples. It is a maintained map
-              of what the documents actually say — and how those sayings
-              connect.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="domains" id="domain">
+      <section class="domains snap-panel" id="partnership">
         <div class="domains-inner">
-          <div class="section-label">Research partnership</div>
+          <div class="section-label">Research Partnership</div>
           <h2>
             If the domain has documents,<br />
             definitions, and dependencies —<br />
@@ -227,11 +198,12 @@
             <span>contracts &amp; clauses</span>
           </div>
           <div class="cta-row">
-            <a class="btn btn-primary" href="mailto:hello@ontoweaver.ai"
-              >Bring us a domain</a
-            >
-            <a class="btn btn-ghost" href="mailto:hello@ontoweaver.ai"
-              >Talk to the lab</a
+            <a
+              class="btn btn-primary"
+              href="https://calendly.com/vpreet-intelligence/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Book a domain review</a
             >
           </div>
         </div>
@@ -239,17 +211,21 @@
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <div>
-          <strong>OntoWeaver</strong>
-          <p>Weaving structured knowledge from documents.</p>
-        </div>
-      </div>
-      <div class="footer-meta">
-        <p>© <span id="year"></span> OntoWeaver. Sample local build.</p>
-        <a href="mailto:hello@ontoweaver.ai">hello@ontoweaver.ai</a>
-      </div>
+      <img
+        class="footer-mark footer-mark--light"
+        src="assets/brand-mark.png"
+        alt=""
+        width="32"
+        height="32"
+      />
+      <img
+        class="footer-mark footer-mark--dark"
+        src="assets/brand-mark-dark.png?v=6"
+        alt=""
+        width="32"
+        height="32"
+      />
+      <p>© <span id="year"></span> OntoWeaver</p>
     </footer>
 
     <script src="main.js"></script>
